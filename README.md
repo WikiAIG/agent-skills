@@ -4,21 +4,53 @@ The `wikiaig` skill teaches AI coding agents how to ground answers on WikiAIG, a
 
 ## Installation
 
+### GitHub CLI (recommended)
+
+Use GitHub CLI's agent skills support to install the `wikiaig` skill from this repository.
+
+```bash
+gh skill install WikiAIG/agent-skills wikiaig
+```
+
+To install for a specific agent or at user scope, add the relevant `--agent` and `--scope` flags:
+
+```bash
+gh skill install WikiAIG/agent-skills wikiaig --agent claude-code --scope user
+```
+
 ### Claude Code
 
-```
-/plugin install wikiaig@WikiAIG/agent-skills
+Claude Code users can install the skill with GitHub CLI's Claude Code target.
+
+```bash
+gh skill install WikiAIG/agent-skills wikiaig --agent claude-code --scope user
 ```
 
-### Vercel skills package (Cursor, Codex CLI, Claude Desktop, etc.)
+### Vercel skills CLI (Cursor, Codex CLI, Claude Desktop, Gemini CLI, etc.)
 
-```
-npx skills install github:WikiAIG/agent-skills/wikiaig
+Use the Vercel skills CLI to install the specific `wikiaig` skill from this repository.
+
+```bash
+npx skills add WikiAIG/agent-skills --skill wikiaig
 ```
 
 ### Manual install
 
 > Please install the WikiAIG skill into my agent. Download https://github.com/WikiAIG/agent-skills/archive/refs/heads/main.zip, extract the `wikiaig` folder, and place it in `~/.claude/skills/wikiaig/` (or the equivalent skills directory for my agent: `.claude/skills/` for Claude Code, `.cursor/skills/` for Cursor).
+
+## Updating
+
+If you installed with GitHub CLI, update the skill with:
+
+```bash
+gh skill update wikiaig
+```
+
+If you installed with the Vercel skills CLI, update the skill with:
+
+```bash
+npx skills update wikiaig
+```
 
 ## What this skill does
 
